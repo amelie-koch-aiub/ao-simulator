@@ -1,0 +1,1 @@
+r0, v, n_actuators, n_lenslets, SH_FOV, WFS_exp_time, WFS_lambda_min, WFS_lambda_max, SC_exp_time, SC_lambda_min, SC_lambda_max, beamsplit, Strehl_noAO, Strehl_AO0.10106975506107721,3.173590308917824,62.6523762808107,8,10,0.001,5.5e-07,6.499999999999999e-07,0.001,0.001,3.75e-07,4.2499999999999995e-07,0.4,0.1557274815400707,2.7232602318610195
