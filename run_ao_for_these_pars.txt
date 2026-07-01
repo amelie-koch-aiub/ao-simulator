@@ -1,2 +1,0 @@
-seeing, velocity, num_actuators, num_lenslets, SH_FOV, WFS_exp_time, WFS_lambda_min, WFS_lambda_max, SC_exp_time, SC_lambda_min, SC_lambda_max, beamsplit
-1, 10, None, None, 7, 1e-3, 5000, 7000, 1e-2, 7000, 7500, 0.3
