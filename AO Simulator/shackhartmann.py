@@ -16,6 +16,7 @@ class MySquareShackHartmannWavefrontSensorOptics(ShackHartmannWavefrontSensorOpt
     ## Helper class to create a Shack-Hartmann WFS with square microlens array
     def __init__(self, input_grid, f_number, num_lenslets, pupil_diameter):
         lenslet_diameter = float(pupil_diameter) / num_lenslets
+        #x = np.linspace(-pupil_diameter/2+lenslet_diameter/2, pupil_diameter/2-lenslet_diameter/2, num_lenslets)
         x = np.linspace(-pupil_diameter/2, pupil_diameter/2-lenslet_diameter, num_lenslets)
         self.mla_grid = CartesianGrid(SeparatedCoords((x, x))).shifted((lenslet_diameter/2, lenslet_diameter/2))
         focal_length = f_number * lenslet_diameter

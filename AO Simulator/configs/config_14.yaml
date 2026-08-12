@@ -1,0 +1,62 @@
+simulation_id: '14'
+
+# most important
+num_lenslets: 10 # 10 corresponds to (D/r0)**2 at seeing = 1.25" (r0 = 8cm)
+px_scale: 1.25 # [arcsec / px]  -- make sure to stay sensitive to seeing, should be below 1.5"
+seeing: 1.25 # [arcsec] @ 500nm (convention) 
+operation_freq: 1e3 # [Hz] WFS cadence
+rcond: 2 #cutoff/svd[0] # this is for truncated method
+probe_amp: 1e-6 # [m] stroke (used during calibration)
+gain: 1 # somewhere between 0.0075 and 0.02, depending on seeing
+num_iterations: 1 # corresponds to [ms] if the atmosphere is set to evolve at 1ms speed
+comments: 'calibration test w 4px per subap, higher rcond 2'
+
+wavelength_wfs: 6000e-10 # [m] -- central wavelength
+wfs_bandwidth: 1000e-10
+
+
+telescope_diameter: 0.8 # [m]
+focal_length: 5.6 # [m]
+fov_sci: 2 # arcsec -- animation becomes very slow & the point source very small if FOV is large
+
+spider_width: 0.02 # [m] -- this is a guess
+num_spiders: 0
+central_obscuration: 0.1558 # [m]
+
+px_size: 24e-6 # [m] -- Armasuisse report WFS cameras
+fov_wfs: 5 # [arcsec] -- LEO size
+
+sci_cam_px_size: 2.9e-6 # [m] - currently installed camera on ZimMAIN for LEO observations
+
+n_telescope_mirrors: 3
+n_ao_mirrors: 7
+
+target_spectrum_file: 'LEO_spectrum_mag5.fits'
+coating_file: 'protected_aluminium_ZimMAIN.csv'
+
+outer_scale: 20 # [m] -- 20m is typical
+tau0: 0.01 # [s] 
+velocity: 20 # m/s
+
+wfs_beamsplit: 1 # 0 (no light into WFS) to 1 (all of the light into WFS)
+
+wavelength_sci: 4750e-10 # [m] -- central wavelength
+sci_bandwidth: 1500e-10
+
+sci_cam_px_size: 2.9e-6 # [m]
+
+sci_exp_time: 1 # [s]
+
+wavelength_percentile_to_scale: 0.5 # which wavelength percentile we want calculate spot size for - 0 (bluest), 1 (reddest), 0.5 (mean)
+
+cutoff_below: 0.75 # illumination threshold to use/discard subapertures from slope estimation
+
+interaction_matrix_type: 'zonal' # 'modal'
+
+inversion_method: 'tikhonov'
+
+t_atmos: 0.001 # this is not the coherence time tau, just the update frequency of atmospheric plots
+include_photon_noise: True
+mag: 0.4
+leakage: 0.01
+playback_speed: 0.1
